@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الجزء الثالث — خط النسخ والثلث والنستعليق | دليل الخطاط المتخصص</title>
+<style>
+  :root{--parchment:#f5ecd3;--ink:#2b1d0e;--ink-soft:#4a3418;--vermillion:#8b1a1a;--gold:#b8860b;--gold-soft:#d4a94a;--teal:#0f5c4a;--shadow:rgba(43,29,14,.25)}
+  *{box-sizing:border-box}html,body{margin:0;padding:0}
+  body{font-family:"Amiri","Sakkal Majalla","Traditional Arabic",serif;background:radial-gradient(1200px 600px at 10% -10%,#f7efda 0%,transparent 60%),radial-gradient(900px 500px at 110% 10%,#f1e4c3 0%,transparent 55%),linear-gradient(180deg,#f5ecd3 0%,#ecdfb8 100%);color:var(--ink);line-height:1.9;min-height:100vh}
+  header.hero{position:relative;padding:48px 24px 32px;text-align:center;background:repeating-linear-gradient(45deg,rgba(184,134,11,.06) 0 14px,transparent 14px 28px),linear-gradient(180deg,#2b1d0e 0%,#3a2714 100%);color:#f5ecd3;border-bottom:4px double var(--gold);overflow:hidden}
+  header.hero::before,header.hero::after{content:"";position:absolute;inset:10px;border:1px solid rgba(212,169,74,.4);pointer-events:none}
+  header.hero::after{inset:18px;border-style:dashed;border-color:rgba(212,169,74,.25)}
+  .ornament{display:inline-block;color:var(--gold-soft);font-size:28px;letter-spacing:10px;margin:0 10px}
+  header.hero h1{font-size:44px;margin:8px 0 4px;text-shadow:0 2px 0 rgba(0,0,0,.4)}
+  header.hero h2{font-size:22px;font-weight:400;margin:0;color:var(--gold-soft)}
+  header.hero .meta{margin-top:14px;font-size:15px;opacity:.85}
+  .wrap{display:grid;grid-template-columns:280px 1fr;gap:24px;max-width:1400px;margin:0 auto;padding:24px}
+  @media(max-width:960px){.wrap{grid-template-columns:1fr}nav.side{position:static!important}}
+  nav.side{position:sticky;top:16px;align-self:start;background:#fff8e4;border:1px solid var(--gold);border-radius:8px;padding:14px;box-shadow:0 6px 18px var(--shadow);max-height:calc(100vh - 32px);overflow:auto}
+  nav.side h3{margin:4px 0 10px;color:var(--vermillion);font-size:18px;border-bottom:1px dashed var(--gold);padding-bottom:6px}
+  nav.side ol{margin:0;padding-right:18px}nav.side li{margin:6px 0}
+  nav.side a{color:var(--ink);text-decoration:none;border-bottom:1px dotted transparent;transition:.2s}
+  nav.side a:hover{color:var(--vermillion);border-bottom-color:var(--vermillion)}
+  main{min-width:0}
+  section{background:#fffaf0;border:1px solid var(--gold);border-radius:10px;padding:22px 26px;margin-bottom:22px;box-shadow:0 4px 14px var(--shadow);position:relative}
+  section::before{content:"";position:absolute;inset:6px;border:1px dashed rgba(184,134,11,.35);border-radius:6px;pointer-events:none}
+  section h2{color:var(--vermillion);font-size:28px;margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid var(--gold)}
+  section h3{color:var(--teal);font-size:22px;margin:18px 0 8px}
+  section h4{color:var(--ink-soft);font-size:19px;margin:14px 0 6px}
+  p{margin:8px 0;text-align:justify}ul,ol{padding-right:22px}li{margin:4px 0}
+  .note{background:#fdf3d7;border-right:4px solid var(--vermillion);padding:10px 14px;margin:12px 0;border-radius:4px;font-size:16px}
+  .tip{background:#e8f3ef;border-right:4px solid var(--teal);padding:10px 14px;margin:12px 0;border-radius:4px}
+  .warn{background:#fbe9e7;border-right:4px solid #a0301a;padding:10px 14px;margin:12px 0;border-radius:4px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:14px 0}
+  .card{background:#fff8e4;border:1px solid var(--gold);border-radius:8px;padding:14px;box-shadow:inset 0 0 0 2px #fffaf0,0 2px 6px var(--shadow)}
+  .card h4{margin:0 0 8px;color:var(--vermillion);border-bottom:1px dashed var(--gold);padding-bottom:6px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;background:#fffaf0;font-size:16px}
+  th,td{border:1px solid var(--gold);padding:8px 10px;text-align:center}
+  th{background:#f1e4c3;color:var(--vermillion)}tr:nth-child(even) td{background:#fdf6e3}
+  .showcase{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:14px 0}
+  .letter-box{background:#fff8e4;border:1px solid var(--gold);border-radius:8px;padding:10px;width:150px;text-align:center;box-shadow:0 2px 8px var(--shadow)}
+  .letter-box svg{display:block;margin:0 auto}.letter-box .lbl{margin-top:6px;color:var(--vermillion);font-weight:700;font-size:17px}
+  .tool{background:#fdf6e3;border:1px dashed var(--gold);border-radius:8px;padding:14px;margin:12px 0}
+  .tool label{display:block;margin:6px 0;font-weight:700;color:var(--teal)}
+  .tool input[type=number],.tool select{font-family:inherit;font-size:16px;padding:6px 10px;border:1px solid var(--gold);border-radius:4px;background:#fffaf0;width:140px}
+  .tool .row{display:flex;flex-wrap:wrap;gap:14px;align-items:end}
+  .tool .out{margin-top:10px;padding:10px;background:#fff;border:1px solid var(--gold);border-radius:4px;min-height:40px;font-size:17px;color:var(--ink)}
+  button.btn{background:linear-gradient(180deg,#b8860b,#8b6508);color:#fff8e4;border:1px solid #6b4d05;padding:8px 16px;border-radius:4px;font-family:inherit;font-size:16px;cursor:pointer}
+  button.btn:hover{filter:brightness(1.1)}
+  .canvas-wrap{background:#fff;border:1px solid var(--gold);border-radius:8px;padding:10px;text-align:center}
+  canvas{background:#fffdf4;border:1px dashed #c9a86a;max-width:100%;touch-action:none}
+  .tabs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+  .tabs button{background:#f1e4c3;border:1px solid var(--gold);padding:6px 12px;border-radius:4px 4px 0 0;font-family:inherit;font-size:15px;cursor:pointer;color:var(--ink)}
+  .tabs button.active{background:var(--vermillion);color:#fff8e4}
+  .tab-panel{display:none}.tab-panel.active{display:block}
+  footer{text-align:center;padding:20px;color:var(--ink-soft);font-size:14px;border-top:2px double var(--gold);margin-top:20px}
+  .verse{text-align:center;font-size:20px;color:var(--vermillion);margin:10px 0;font-style:italic}
+  .badge{display:inline-block;background:var(--teal);color:#fff;padding:2px 8px;border-radius:10px;font-size:13px;margin:0 4px}
+  .badge.gold{background:var(--gold)}.badge.red{background:var(--vermillion)}
+  .comparison{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+  @media(max-width:768px){.comparison{grid-template-columns:1fr}}
+  .comparison .card{text-align:center}.comparison .card h4{font-size:20px;margin-bottom:12px}
+
+  @media(max-width:600px){header.hero{padding:32px 16px 24px}header.hero h1{font-size:32px}header.hero h2{font-size:18px}.wrap{padding:12px;gap:14px}section{padding:18px 16px}section h2{font-size:24px}table{display:block;overflow-x:auto;white-space:nowrap}}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+
+<meta name="theme-color" content="#2b1d0e">
+<meta name="application-name" content="صنعة الخط العربي">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+
+<header class="hero">
+  <div><span class="ornament">۞</span>بسم الله الرحمن الرحيم<span class="ornament">۞</span></div>
+  <h1>الجزء الثالث</h1>
+  <h2>في صنعة الخط العربي — خط النسخ والثلث والنستعليق</h2>
+  <div class="meta">دليلٌ مُحقَّق لأهل الاختصاص من الخطاطين · إصدار ١٤٤٨هـ / ٢٠٢٦م</div>
+</header>
+
+<div class="wrap">
+  <nav class="side">
+    <h3>فهرس الأجزاء</h3>
+    <ol>
+      <li><a href="#intro">تمهيد وتعريف</a></li>
+      <li><a href="#history">التاريخ والتطور</a></li>
+      <li><a href="#comparison">مقارنة الخطوط الثلاثة</a></li>
+      <li><a href="#tools">عدّة الخطاط</a></li>
+      <li><a href="#measures">المقاييس والنسب</a></li>
+      <li><a href="#naskh">خط النسخ</a></li>
+      <li><a href="#thuluth">خط الثلث</a></li>
+      <li><a href="#nastaliq">خط النستعليق</a></li>
+      <li><a href="#letters">تشريح الحروف</a></li>
+      <li><a href="#ratios">جداول النسب</a></li>
+      <li><a href="#calc">حاسبة النسب</a></li>
+      <li><a href="#exercises">التمارين التطبيقية</a></li>
+      <li><a href="#canvas">لوحة التتبع</a></li>
+      <li><a href="#biblio">المراجع والمصادر</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h2>تمهيد وتعريف</h2>
+      <p>الخط العربي فنٌّ عريق تفرعت منه مدارس متعددة. في هذا الجزء نتناول ثلاثة من أبرز الخطوط العربية التي حظيت بانتشار واسع واستعمال مكثف عبر التاريخ:</p>
+      <div class="comparison">
+        <div class="card"><h4>خط النسخ</h4><p>خط <b>الوضوح والقراءة</b>، استُعمل في نسخ الكتب والمصاحف. يتميز ببساطة حروفه وسهولة كتابته.</p><span class="badge">للمطالعة</span><span class="badge gold">للكتب</span></div>
+        <div class="card"><h4>خط الثلث</h4><p>خط <b>الجمال والفخامة</b>، يُستعمل في العناوين والزخارف المعمارية. يتميز بارتفاعه الشاهق وتفاريعه المعقدة.</p><span class="badge red">للعناوين</span><span class="badge gold">للزخرفة</span></div>
+        <div class="card"><h4>خط النستعليق</h4><p>خط <b>الأناقة والرقة</b>، نشأ في بلاد فارس. يتميز بانسيابية حروفه وميله الجمالي.</p><span class="badge">للفارسية</span><span class="badge gold">للشعر</span></div>
+      </div>
+      <div class="note"><b>قاعدة الأصيل:</b> «مَن أتقن خط النسخ أولاً، يَسُرَ عليه الانتقال إلى الثلث والنستعليق، لأن النسخ أساس جميع الخطوط».</div>
+    </section>
+
+    <section id="history">
+      <h2>التاريخ والتطور</h2>
+      <h3>١. خط النسخ</h3>
+      <p>نشأ في <b>العصر العباسي</b> (القرن ٤هـ) على يد <b>ابن مقلة</b> الذي وضع قواعده الأولى. سُمِّي بالنسخ لكثرة استعماله في نسخ الكتب. تطوّر على يد <b>ياقوت المستعصمي</b> (٧هـ) الذي أتم قواعده.</p>
+      <h3>٢. خط الثلث</h3>
+      <p>يُعدّ من <b>أقدم الخطوط</b>، نشأ في العصر الأموي. سُمِّي بالثلث لأن عرض قلمه يُساوي ثلث ارتفاع الألف. بلغ ذروته على يد ابن البواب وياقوت المستعصمي.</p>
+      <h3>٣. خط النستعليق</h3>
+      <p>نشأ في <b>بلاد فارس</b> (القرن ٨هـ) على يد <b>مير علي التبريزي</b> الذي جمعه من خطي النسخ والتعليق. سُمِّي بـ"نستعليق" أي "الأجمل من التعليق".</p>
+    </section>
+
+    <section id="comparison">
+      <h2>مقارنة الخطوط الثلاثة</h2>
+      <table>
+        <tr><th>المعيار</th><th>النسخ</th><th>الثلث</th><th>النستعليق</th></tr>
+        <tr><td><b>الطابع العام</b></td><td>بسيط وواضح</td><td>فخم ومعقّد</td><td>أنيق ومنساب</td></tr>
+        <tr><td><b>ارتفاع الألف</b></td><td>٥ نقط</td><td>٩ نقط</td><td>٧ نقط</td></tr>
+        <tr><td><b>عرض القلم</b></td><td>٢–٤ ملم</td><td>٤–٨ ملم</td><td>٢–٣ ملم</td></tr>
+        <tr><td><b>الاستدارة</b></td><td>متوسطة</td><td>قليلة</td><td>كثيرة</td></tr>
+        <tr><td><b>التفاريع</b></td><td>قصيرة</td><td>طويلة ومعقدة</td><td>منسابة وطويلة</td></tr>
+        <tr><td><b>الاستعمال</b></td><td>الكتب والمصاحف</td><td>العناوين والزخارف</td><td>الشعر والأدب</td></tr>
+      </table>
+    </section>
+
+    <section id="tools">
+      <h2>عدّة الخطاط</h2>
+      <div class="grid">
+        <div class="card"><h4>١. القلم (القسَب)</h4><p><b>للنسخ:</b> رفيع (٢–٤ ملم) مبري مستطيلاً.<br><b>للثلث:</b> عريض (٤–٨ ملم) مبري مدبَّباً.<br><b>للنستعليق:</b> متوسط (٢–٣ ملم) مبري مائلاً.</p></div>
+        <div class="card"><h4>٢. المداد (الحبر)</h4><p>سخام + صمغ عربي + ماء الورد. يُترك ليجف ٣٠ يوماً. يُضاف الذهب للعناوين الفاخرة.</p></div>
+        <div class="card"><h4>٣. الورق المُصقَل</h4><p>ورقٌ يُعالَج بالنشا والبياض ليُصبح أملساً لا يَمُصُّ المداد بسرعة، ويُتيح إتمام التفاريع.</p></div>
+        <div class="card"><h4>٤. المِقياس والمِسطَرة</h4><p>شريط مُدرَّج لقياس النقط والدوائر، ومسطرة نحاسية لضبط السطور.</p></div>
+      </div>
+    </section>
+
+    <section id="measures">
+      <h2>المقاييس والنسب</h2>
+      <p>تقوم الخطوط العربية على منظومة قياس دقيقة تُسمى <b>«علم النسبة»</b>. وحدة القياس الأساسية هي <b>النقطة</b> (المربع الناتج عن ضغط طرف القلم).</p>
+      <div class="note"><b>قاعدة:</b> «إذا كان عرض القلم ٣ ملم، فارتفاع الألف في النسخ = ٥ نقط = ١٥ ملم، وفي الثلث = ٩ نقط = ٢٧ ملم».</div>
+    </section>
+
+    <section id="naskh">
+      <h2>خط النسخ</h2>
+      <span class="badge">للمطالعة</span><span class="badge gold">للكتب والمصاحف</span>
+      <h3>الخصائص والقواعد</h3>
+      <ul>
+        <li>حروف <b>بسيطة وواضحة</b> سهلة القراءة.</li>
+        <li>ارتفاع الألف = <b>٥ نقط</b>، عرض القلم = <b>٢–٤ ملم</b>.</li>
+        <li>يوضع القلم بزاوية <b>٤٥°</b> على السطر.</li>
+        <li>مراعاة <b>المسافات المتساوية</b> بين الحروف والسطور.</li>
+      </ul>
+    </section>
+
+    <section id="thuluth">
+      <h2>خط الثلث</h2>
+      <span class="badge red">للعناوين</span><span class="badge gold">للزخرفة المعمارية</span>
+      <h3>الخصائص والقواعد</h3>
+      <ul>
+        <li>حروف <b>فخمة ومعقّدة</b> ذات طابع هندسي.</li>
+        <li>ارتفاع الألف = <b>٩ نقط</b>، عرض القلم = <b>٤–٨ ملم</b>.</li>
+        <li>يوضع القلم بزاوية <b>٣٠°–٤٥°</b> مع إبطاء الحركة.</li>
+        <li>التفاريع <b>طويلة ومعقّدة</b> (تُسمى التفاريع الثلثية).</li>
+      </ul>
+      <div class="warn"><b>تحذير:</b> خط الثلث من أصعب الخطوط، ولا تُتقِنه إلا بعد سنوات من الممارسة تحت إشراف أستاذ مُجاز.</div>
+    </section>
+
+    <section id="nastaliq">
+      <h2>خط النستعليق</h2>
+      <span class="badge">للفارسية</span><span class="badge gold">للشعر والأدب</span>
+      <h3>الخصائص والقواعد</h3>
+      <ul>
+        <li>حروف <b>أنيقة ومنسابة</b> ذات طابع انسيابي.</li>
+        <li>ارتفاع الألف = <b>٧ نقط</b>، عرض القلم = <b>٢–٣ ملم</b>.</li>
+        <li>يوضع القلم بزاوية <b>٦٠°</b> (أكثر ميلاناً من النسخ).</li>
+        <li>مراعاة <b>الميل العام</b> للسطر (ينحدر من اليمين إلى اليسار).</li>
+      </ul>
+    </section>
+
+    <section id="letters">
+      <h2>تشريح الحروف (مقارن)</h2>
+      <table>
+        <tr><th>الحرف</th><th>النسخ</th><th>الثلث</th><th>النستعليق</th><th>ملاحظات</th></tr>
+        <tr><td>أ</td><td>٥ ن</td><td>٩ ن</td><td>٧ ن</td><td>عمودي</td></tr>
+        <tr><td>ب</td><td>٥ ن</td><td>٩ ن</td><td>٧ ن</td><td>مَدٌّ أفقي</td></tr>
+        <tr><td>ج، ح، خ</td><td>٤ ن</td><td>٧ ن</td><td>٥ ن</td><td>مُقوَّس</td></tr>
+        <tr><td>د، ذ، ر، ز</td><td>٣ ن</td><td>٥ ن</td><td>٤ ن</td><td>مُنفصل / مُستدير</td></tr>
+        <tr><td>س، ش</td><td>٥ ن</td><td>٨ ن</td><td>٦ ن</td><td>٣ أسنان</td></tr>
+        <tr><td>ص، ض</td><td>٧ ن</td><td>١٢ ن</td><td>٩ ن</td><td>مَدٌّ طويل</td></tr>
+        <tr><td>ط، ظ</td><td>٨ ن</td><td>١٤ ن</td><td>١٠ ن</td><td>دائري + عمودي</td></tr>
+        <tr><td>ع، غ</td><td>٤ ن</td><td>٧ ن</td><td>٥ ن</td><td>مُقوَّس</td></tr>
+        <tr><td>ف، ق</td><td>٥ ن</td><td>٩ ن</td><td>٧ ن</td><td>مُقوَّس</td></tr>
+        <tr><td>ك</td><td>٦ ن</td><td>١٠ ن</td><td>٨ ن</td><td>مائل</td></tr>
+        <tr><td>ل</td><td>٨ ن</td><td>١٤ ن</td><td>١٠ ن</td><td>عمودي + مَدٌّ</td></tr>
+        <tr><td>م، هـ</td><td>٤ ن</td><td>٧ ن</td><td>٥ ن</td><td>دائري</td></tr>
+        <tr><td>ن</td><td>٥ ن</td><td>٩ ن</td><td>٧ ن</td><td>مُقوَّس</td></tr>
+        <tr><td>و</td><td>٣ ن</td><td>٥ ن</td><td>٤ ن</td><td>مُقوَّس</td></tr>
+        <tr><td>ي</td><td>٦ ن</td><td>١٠ ن</td><td>٨ ن</td><td>مَدٌّ + نقطتان</td></tr>
+      </table>
+    </section>
+
+    <section id="ratios">
+      <h2>جداول النسب التفصيلية</h2>
+      <div class="grid">
+        <div class="card">
+          <h4>خط النسخ (قلم ٣ ملم)</h4>
+          <ul><li>الألف: ٥ ن = ١٥ ملم</li><li>الباء: ٥ ن = ١٥ ملم</li><li>السطر: ٢٠ ن = ٦٠ ملم</li></ul>
+        </div>
+        <div class="card">
+          <h4>خط الثلث (قلم ٦ ملم)</h4>
+          <ul><li>الألف: ٩ ن = ٥٤ ملم</li><li>الباء: ٩ ن = ٥٤ ملم</li><li>السطر: ٣٥ ن = ٢١٠ ملم</li></ul>
+        </div>
+        <div class="card">
+          <h4>خط النستعليق (قلم ٢.٥ ملم)</h4>
+          <ul><li>الألف: ٧ ن = ١٧.٥ ملم</li><li>الباء: ٧ ن = ١٧.٥ ملم</li><li>السطر: ٢٥ ن = ٦٢.٥ ملم</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="calc">
+      <h2>حاسبة النسب التفاعلية</h2>
+      <div class="tool">
+        <div class="row">
+          <div><label>عرض القلم (ملم):</label><input type="number" id="penWidth" value="3" min="0.5" max="20" step="0.5"></div>
+          <div><label>الخط:</label>
+            <select id="scriptType">
+              <option value="naskh">خط النسخ</option>
+              <option value="thuluth">خط الثلث</option>
+              <option value="nastaliq">خط النستعليق</option>
+            </select>
+          </div>
+          <div><button class="btn" onclick="calculate()">احسب</button></div>
+        </div>
+        <div class="out" id="calcResult">اضغط "احسب" لعرض النتائج...</div>
+      </div>
+    </section>
+
+    <!-- ===== التمارين التطبيقية ===== -->
+    <section id="exercises">
+      <h2>التمارين التطبيقية</h2>
+      <p>إتقان الخطوط الثلاثة يحتاج إلى تمارين منتظمة ومُمنهجة. فيما يلي برنامج تدريبي مُقترح لمدة ٣ أشهر (١٢ أسبوعاً):</p>
+
+      <h3>المرحلة الأولى: أساسيات خط النسخ (أسابيع ١–٤)</h3>
+      <ul>
+        <li><b>الأسبوع ١:</b> التدرب على رسم النقط والمربعات (قطر ٢ن، ٣ن) وضبط زاوية القلم (٤٥°) بشكل ثابت.</li>
+        <li><b>الأسبوع ٢:</b> كتابة الحروف العمودية والممتدة (أ، ل، ب، ت) مع ضبط الطول بالنقط بدقة.</li>
+        <li><b>الأسبوع ٣:</b> الحروف المنحنية (ج، ح، خ، ع، غ) داخل الدوائر الوهمية، مع مراعاة الانسيابية.</li>
+        <li><b>الأسبوع ٤:</b> تركيب الكلمات البسيطة (بسم، الله، حمد) مع مراعاة المسافات المتساوية بين الحروف.</li>
+      </ul>
+
+      <h3>المرحلة الثانية: إتقان خط الثلث (أسابيع ٥–٨)</h3>
+      <ul>
+        <li><b>الأسبوع ٥:</b> التدرب على المدات العريضة والتفاريع المعقدة (ألف الثلث، لام الثلث) وضبط التناظر.</li>
+        <li><b>الأسبوع ٦:</b> حروف العلة والمقوسة (ص، ض، ط، ظ) مع ضبط الانحناءات الكبيرة والدوائر الوهمية.</li>
+        <li><b>الأسبوع ٧:</b> التركيبات المعقدة والكلمات المتداخلة (مثل: الله، محمد، الرحمن) مع ضبط التشابك.</li>
+        <li><b>الأسبوع ٨:</b> كتابة آية قصيرة بخط الثلث مع التشكيل الهندسي والتذهيب البسيط للإطار.</li>
+      </ul>
+
+      <h3>المرحلة الثالثة: إتقان خط النستعليق (أسابيع ٩–١٢)</h3>
+      <ul>
+        <li><b>الأسبوع ٩:</b> ضبط زاوية القلم (٦٠°) وميل السطر العام (الانحدار المنساب من اليمين لليسار).</li>
+        <li><b>الأسبوع ١٠:</b> الحروف المنسابة والتفاريع الطويلة (ي، م، ن، س) مع إرخاء الذيل بانسيابية.</li>
+        <li><b>الأسبوع ١١:</b> التركيبات المتتالية (التسلسل) وحل الإشكالات (مثل: ل + ا = لا، م + ي = مي).</li>
+        <li><b>الأسبوع ١٢:</b> كتابة بيت شعر كامل بخط النستعليق مع ضبط التشكيل (الإعراب) والتوازن البصري للوحة.</li>
+      </ul>
+
+      <div class="tip">
+        <b>نصيحة ذهبية:</b> خصِّص ساعة يومياً للتمرين الهادئ. لا تنتقل إلى تمرين جديد حتى تُتقِن الذي قبله بنسبة ٩٠٪ على الأقل. استخدم الورق المسطر مسبقاً في الأسابيع الأولى.
+      </div>
+    </section>
+
+    <section id="canvas">
+      <h2>لوحة التتبع التفاعلية</h2>
+      <p>استعمل هذه اللوحة للتدرب على كتابة الحروف. تتبع النموذج المُعطى، ثم امسح اللوحة وابدأ من جديد.</p>
+      <div class="canvas-wrap">
+        <canvas id="drawCanvas" width="800" height="400"></canvas>
+        <div style="margin-top:10px">
+          <button class="btn" onclick="clearCanvas()">مسح اللوحة</button>
+          <button class="btn" onclick="toggleGuide()">إظهار/إخفاء النموذج</button>
+          <select id="guideLetter" onchange="changeGuide()">
+            <option value="ا">ألف</option>
+            <option value="ب">باء</option>
+            <option value="س">سين</option>
+            <option value="ع">عين</option>
+            <option value="ص">صاد</option>
+            <option value="م">ميم</option>
+            <option value="ي">ياء</option>
+          </select>
+        </div>
+      </div>
+      <div class="note"><b>تعليمات:</b> استعمل الفأرة أو الإصبع (في الأجهزة اللمسية) للكتابة. النموذج يظهر بلونٍ باهت لتتبعه.</div>
+    </section>
+
+    <section id="biblio">
+      <h2>المراجع والمصادر</h2>
+      <h3>الكتب التراثية</h3>
+      <ul>
+        <li>ابن مقلة، <i>رسالة في علم الخط والقلم</i>.</li>
+        <li>ياقوت المستعصمي، <i>قواعد خط النسخ والثلث</i> (مجموع رسائل).</li>
+        <li>مير عماد الحسني، <i>مخطوطات النستعليق</i> (مجموعة متحف طوب قابي).</li>
+      </ul>
+      <h3>المراجع المعاصرة</h3>
+      <ul>
+        <li>عبد الغني العاني، <i>قواعد خط النسخ</i>، دار الرشيد، بغداد.</li>
+        <li>محمد طاهر الكردي، <i>تاريخ الخط العربي وآدابه</i>.</li>
+        <li>هاشم محمد البغدادي، <i>خط النستعليق: قواعده وأصوله</i>.</li>
+      </ul>
+      <div class="verse">«واللهُ وليُّ التوفيق، وصلى الله على سيدنا محمد وآله وصحبه وسلم»</div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div>۞ تم التأليف والإعداد بعناية لأهل الاختصاص ۞</div>
+  <div>الجزء الثالث — خط النسخ والثلث والنستعليق · ١٤٤٨هـ / ٢٠٢٦م</div>
+</footer>
+
+<script>
+  // Tabs
+  document.querySelectorAll('.tabs button').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Calculator
+  const ratios = {
+    naskh:    {alif:5, ba:5, sad:7, line:20},
+    thuluth:  {alif:9, ba:9, sad:12, line:35},
+    nastaliq: {alif:7, ba:7, sad:9, line:25}
+  };
+  function calculate(){
+    const w = parseFloat(document.getElementById('penWidth').value);
+    const t = document.getElementById('scriptType').value;
+    if(!w || w<=0){
+      document.getElementById('calcResult').innerHTML = '<span style="color:#a0301a">أدخل عرض قلم صحيحاً.</span>';
+      return;
+    }
+    const r = ratios[t];
+    const names = {naskh:'خط النسخ', thuluth:'خط الثلث', nastaliq:'خط النستعليق'};
+    const html = `<b>الخط المختار: ${names[t]} | عرض النُّقطة (ن) = ${w} ملم</b><br>
+      <table style="margin-top:8px">
+        <tr><th>المقياس</th><th>بالنقط</th><th>بالملم</th></tr>
+        <tr><td>ارتفاع الألف</td><td>${r.alif} ن</td><td>${(r.alif*w).toFixed(2)} ملم</td></tr>
+        <tr><td>طول الباء</td><td>${r.ba} ن</td><td>${(r.ba*w).toFixed(2)} ملم</td></tr>
+        <tr><td>طول الصاد</td><td>${r.sad} ن</td><td>${(r.sad*w).toFixed(2)} ملم</td></tr>
+        <tr><td>عرض السطر التقريبي</td><td>${r.line} ن</td><td>${(r.line*w).toFixed(2)} ملم</td></tr>
+      </table>`;
+    document.getElementById('calcResult').innerHTML = html;
+  }
+
+  // Canvas
+  const canvas = document.getElementById('drawCanvas');
+  const ctx = canvas.getContext('2d');
+  let drawing = false, showGuide = true, currentGuide = 'ا';
+
+  function drawGuide(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.strokeStyle = 'rgba(184,134,11,0.15)'; ctx.lineWidth = 1;
+    for(let i=0;i<canvas.width;i+=40){ctx.beginPath();ctx.moveTo(i,0);ctx.lineTo(i,canvas.height);ctx.stroke();}
+    for(let i=0;i<canvas.height;i+=40){ctx.beginPath();ctx.moveTo(0,i);ctx.lineTo(canvas.width,i);ctx.stroke();}
+    if(showGuide){
+      ctx.fillStyle = 'rgba(139,26,26,0.15)';
+      ctx.font = 'bold 260px Amiri, serif';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(currentGuide, canvas.width/2, canvas.height/2);
+    }
+  }
+  function clearCanvas(){drawGuide();}
+  function toggleGuide(){showGuide=!showGuide;drawGuide();}
+  function changeGuide(){currentGuide = document.getElementById('guideLetter').value;drawGuide();}
+
+  function getPos(e){
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width, scaleY = canvas.height / rect.height;
+    const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+    return {x: x*scaleX, y: y*scaleY};
+  }
+
+  canvas.addEventListener('mousedown',e=>{drawing=true;const p=getPos(e);ctx.beginPath();ctx.moveTo(p.x,p.y);});
+  canvas.addEventListener('mousemove',e=>{
+    if(!drawing) return;
+    const p=getPos(e);ctx.lineTo(p.x,p.y);ctx.strokeStyle='#2b1d0e';ctx.lineWidth=4;ctx.lineCap='round';ctx.lineJoin='round';ctx.stroke();
+  });
+  canvas.addEventListener('mouseup',()=>drawing=false);
+  canvas.addEventListener('mouseout',()=>drawing=false);
+
+  canvas.addEventListener('touchstart',e=>{e.preventDefault();drawing=true;const p=getPos(e);ctx.beginPath();ctx.moveTo(p.x,p.y);},{passive:false});
+  canvas.addEventListener('touchmove',e=>{
+    e.preventDefault();if(!drawing) return;
+    const p=getPos(e);ctx.lineTo(p.x,p.y);ctx.strokeStyle='#2b1d0e';ctx.lineWidth=4;ctx.lineCap='round';ctx.lineJoin='round';ctx.stroke();
+  },{passive:false});
+  canvas.addEventListener('touchend',()=>drawing=false);
+
+  drawGuide();
+
+  // Smooth scroll
+  document.querySelectorAll('nav.side a').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  });
+</script>
+</body>
+</html>
